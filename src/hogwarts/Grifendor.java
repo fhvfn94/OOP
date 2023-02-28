@@ -35,4 +35,20 @@ public class Grifendor extends Hogwarts {
     public void setBravery(int bravery) {
         this.bravery = bravery;
     }
+
+    public int getPointsGrifendor() {
+        int r = 0;
+        r += getPoints() + getNobility() + getHonor() + getBravery();
+        return r;
+    }
+
+    public static int getMax(Grifendor[] studies) {
+        int max = studies[0].getPointsGrifendor();
+        for (int i = 0; i < studies.length; i++) {
+            if (max < studies[i].getPointsGrifendor()) {
+                max = studies[i].getPointsGrifendor();
+            }
+        }
+        return max;
+    }
 }

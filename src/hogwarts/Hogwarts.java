@@ -34,4 +34,19 @@ public class Hogwarts {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getPoints() {
+        int r = 0;
+        r += getConjure() + getMove();
+        return r;
+    }
+    public static int getMax(Hogwarts[] hogwarts) {
+        int max = hogwarts[0].getPoints();
+        for (int i = 0; i < hogwarts.length; i++) {
+            if (max < hogwarts[i].getPoints()) {
+                max = hogwarts[i].getPoints();
+            }
+        }
+        return max;
+    }
 }

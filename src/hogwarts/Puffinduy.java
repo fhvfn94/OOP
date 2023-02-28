@@ -35,4 +35,19 @@ public class Puffinduy extends Hogwarts {
     public void setHonest(int honest) {
         this.honest = honest;
     }
+    public int getPointsPuffinduy() {
+        int r = 0;
+        r += getPoints() + getIndustrious() + getLoyalty() + getHonest();
+        return r;
+    }
+
+    public static int getMax(Puffinduy[] studies1) {
+        int max = studies1[0].getPointsPuffinduy();
+        for (int i = 0; i < studies1.length; i++) {
+            if (max < studies1[i].getPointsPuffinduy()) {
+                max = studies1[i].getPointsPuffinduy();
+            }
+        }
+        return max;
+    }
 }

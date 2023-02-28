@@ -55,4 +55,20 @@ public class Slizerin extends Hogwarts {
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
     }
+
+    public int getPointsSlizerin() {
+        int r = 0;
+        r += getPoints() + getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getLustForPower();
+        return r;
+    }
+
+    public static int getMax(Slizerin[] studies) {
+        int max = studies[0].getPointsSlizerin();
+        for (int i = 0; i < studies.length; i++) {
+            if (max < studies[i].getPointsSlizerin()) {
+                max = studies[i].getPointsSlizerin();
+            }
+        }
+        return max;
+    }
 }

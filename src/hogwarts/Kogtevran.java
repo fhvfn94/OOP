@@ -45,4 +45,20 @@ public class Kogtevran extends Hogwarts {
     public void setCreative(int creative) {
         this.creative = creative;
     }
+
+    public int getPointsKogtevran() {
+        int r = 0;
+        r += getPoints() + getSmart() + getWise() + getWitty() + getCreative();
+        return r;
+    }
+
+    public static int getMax(Kogtevran[] studies) {
+        int max = studies[0].getPointsKogtevran();
+        for (int i = 0; i < studies.length; i++) {
+            if (max < studies[i].getPointsKogtevran()) {
+                max = studies[i].getPointsKogtevran();
+            }
+        }
+        return max;
+    }
 }
