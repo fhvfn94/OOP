@@ -56,19 +56,31 @@ public class Slizerin extends Hogwarts {
         this.lustForPower = lustForPower;
     }
 
+    //    public int getPointsSlizerin() {
+//        int r = 0;
+//        r += getPoints() + getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getLustForPower();
+//        return r;
+//    }
+//
+//    public static int getMax(Slizerin[] studies) {
+//        int max = studies[0].getPointsSlizerin();
+//        for (int i = 0; i < studies.length; i++) {
+//            if (max < studies[i].getPointsSlizerin()) {
+//                max = studies[i].getPointsSlizerin();
+//            }
+//        }
+//        return max;
+//    }
     public int getPointsSlizerin() {
-        int r = 0;
-        r += getPoints() + getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getLustForPower();
+        int r = this.getPoints() + this.getCunning() + this.getLustForPower() + this.getAmbition() + this.getResourcefulness();
         return r;
     }
 
-    public static int getMax(Slizerin[] studies) {
-        int max = studies[0].getPointsSlizerin();
-        for (int i = 0; i < studies.length; i++) {
-            if (max < studies[i].getPointsSlizerin()) {
-                max = studies[i].getPointsSlizerin();
-            }
+    public static String getMax(Slizerin slizerin, Slizerin slizerin2) {
+        if (slizerin.getPointsSlizerin() > slizerin2.getPointsSlizerin()) {
+            return slizerin.getName() + " - " + slizerin.getPointsSlizerin();
         }
-        return max;
+        return slizerin2.getName() + " - " + slizerin2.getPointsSlizerin();
     }
+
 }

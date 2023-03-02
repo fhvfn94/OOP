@@ -35,18 +35,35 @@ public class Hogwarts {
         this.name = name;
     }
 
-    public int getPoints() {
-        int r = 0;
-        r += getConjure() + getMove();
+//    public int getPoints() {
+//        int r = 0;
+//        r += getConjure() + getMove();
+//        return r;
+//    }
+//    public static int getMax(Hogwarts[] hogwarts) {
+//        int max = hogwarts[0].getPoints();
+//        for (int i = 0; i < hogwarts.length; i++) {
+//            if (max < hogwarts[i].getPoints()) {
+//                max = hogwarts[i].getPoints();
+//            }
+//        }
+//        return max;
+//    }
+
+    public  int getPoints(){
+        int r = this.getConjure() + this.getMove();
         return r;
     }
-    public static int getMax(Hogwarts[] hogwarts) {
-        int max = hogwarts[0].getPoints();
-        for (int i = 0; i < hogwarts.length; i++) {
-            if (max < hogwarts[i].getPoints()) {
-                max = hogwarts[i].getPoints();
-            }
+
+//    @Override
+//    public String toString() {
+//        return "Меня зовут " + getName() + "мои характеристики: " + getConjure() +  " это "
+//    }
+
+    public static String getMax(Hogwarts one, Hogwarts two) {
+        if (one.getPoints() > two.getPoints()) {
+            return one.getName() + " - " + one.getPoints();
         }
-        return max;
+        return two.getName() + " - " + two.getPoints();
     }
 }
