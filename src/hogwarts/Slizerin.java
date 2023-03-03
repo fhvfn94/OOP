@@ -83,4 +83,8 @@ public class Slizerin extends Hogwarts {
         return slizerin2.getName() + " - " + slizerin2.getPointsSlizerin();
     }
 
+    @Override
+    public String toString() {
+        return "Меня зовут " + getName() + " мои характеристики: " + getConjure() +  " это колдовство, " + getMove() + " это трансгенерирование, " + getCunning() + " это хитрость, " + getDetermination() + " это амбициозность, " + getAmbition() + " это амбициозность, " + getResourcefulness() + " это находчивость, "  + getLustForPower() + " это жажда власти, итого " + getPointsSlizerin() + " баллов;";
+    }
 }

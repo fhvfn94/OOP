@@ -36,19 +36,36 @@ public class Grifendor extends Hogwarts {
         this.bravery = bravery;
     }
 
+//    public int getPointsGrifendor() {
+//        int r = 0;
+//        r += getPoints() + getNobility() + getHonor() + getBravery();
+//        return r;
+//    }
+//
+//    public static int getMax(Grifendor[] studies) {
+//        int max = studies[0].getPointsGrifendor();
+//        for (int i = 0; i < studies.length; i++) {
+//            if (max < studies[i].getPointsGrifendor()) {
+//                max = studies[i].getPointsGrifendor();
+//            }
+//        }
+//        return max;
+//    }
+
     public int getPointsGrifendor() {
-        int r = 0;
-        r += getPoints() + getNobility() + getHonor() + getBravery();
+        int r = this.getPoints() + this.getNobility() + this.getHonor() + this.getBravery();
         return r;
     }
 
-    public static int getMax(Grifendor[] studies) {
-        int max = studies[0].getPointsGrifendor();
-        for (int i = 0; i < studies.length; i++) {
-            if (max < studies[i].getPointsGrifendor()) {
-                max = studies[i].getPointsGrifendor();
-            }
+    public static String getMax(Grifendor grifendor, Grifendor grifendor2) {
+        if (grifendor.getPointsGrifendor() > grifendor2.getPointsGrifendor()) {
+            return grifendor.getName() + " - " + grifendor.getPointsGrifendor();
         }
-        return max;
+        return grifendor2.getName() + " - " + grifendor2.getPointsGrifendor();
+    }
+
+    @Override
+    public String toString() {
+        return "Меня зовут " + getName() + " мои характеристики: " + getConjure() +  " это колдовство, " + getMove() + " это трансгенерирование, " + getNobility() + " это благородство, " + getHonor() + " это честь, " + getBravery() + " это храбрость, итого" + getPointsGrifendor() + " баллов;";
     }
 }

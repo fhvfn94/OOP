@@ -35,8 +35,7 @@ public class Main {
 //        }
 //        System.out.println(Puffinduy.getMax(studies1));
 
-
-        Slizerin one = new Slizerin("Драко Малфой", 10, 10, 12, 2, 10, 14, 54);
+        Slizerin one = new Slizerin("Драко Малфой", 1, 1, 1, 1, 1, 1, 1);
         Slizerin two = new Slizerin("Грэхэм Монтегю", 5, 5, 5, 5, 5, 5, 5);
         Slizerin three = new Slizerin("Грегори Гойл", 3, 3, 3, 3, 3, 4, 4);
         Puffinduy four = new Puffinduy("Драко Малфой", 100, 100, 10, 10, 10);
@@ -44,7 +43,8 @@ public class Main {
         Puffinduy six = new Puffinduy("Грегори Гойл", 3, 3, 3, 3, 3);
         System.out.println(Hogwarts.getMax(one, five));
         System.out.println(Slizerin.getMax(two, three));
-        System.out.println();
+        System.out.println(Puffinduy.getMax(four, six));
+        System.out.println(one.toString());
 
 
     }

@@ -55,15 +55,15 @@ public class Hogwarts {
         return r;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Меня зовут " + getName() + "мои характеристики: " + getConjure() +  " это "
-//    }
-
     public static String getMax(Hogwarts one, Hogwarts two) {
         if (one.getPoints() > two.getPoints()) {
             return one.getName() + " - " + one.getPoints();
         }
         return two.getName() + " - " + two.getPoints();
+    }
+
+    @Override
+    public String toString() {
+        return "Меня зовут " + getName() + " мои характеристики: " + getConjure() +  " это колдовство, " + getMove() + " это трансгенерирование, итого " + getPoints() + " баллов;";
     }
 }

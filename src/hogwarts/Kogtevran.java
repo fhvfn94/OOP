@@ -46,19 +46,35 @@ public class Kogtevran extends Hogwarts {
         this.creative = creative;
     }
 
-    public int getPointsKogtevran() {
-        int r = 0;
-        r += getPoints() + getSmart() + getWise() + getWitty() + getCreative();
-        return r;
+//    public int getPointsKogtevran() {
+//        int r = 0;
+//        r += getPoints() + getSmart() + getWise() + getWitty() + getCreative();
+//        return r;
+//    }
+//
+//    public static int getMax(Kogtevran[] studies) {
+//        int max = studies[0].getPointsKogtevran();
+//        for (int i = 0; i < studies.length; i++) {
+//            if (max < studies[i].getPointsKogtevran()) {
+//                max = studies[i].getPointsKogtevran();
+//            }
+//        }
+//        return max;
+//    }
+public int getPointsKogtevran() {
+    int r = this.getPoints() + this.getSmart() + this.getWise() + this.getWitty() + this.getCreative();
+    return r;
+}
+
+    public static String getMax(Kogtevran kogtevran, Kogtevran kogtevran2) {
+        if (kogtevran.getPointsKogtevran() > kogtevran2.getPointsKogtevran()) {
+            return kogtevran.getName() + " - " + kogtevran.getPointsKogtevran();
+        }
+        return kogtevran2.getName() + " - " + kogtevran2.getPointsKogtevran();
     }
 
-    public static int getMax(Kogtevran[] studies) {
-        int max = studies[0].getPointsKogtevran();
-        for (int i = 0; i < studies.length; i++) {
-            if (max < studies[i].getPointsKogtevran()) {
-                max = studies[i].getPointsKogtevran();
-            }
-        }
-        return max;
+    @Override
+    public String toString() {
+        return "Меня зовут " + getName() + " мои характеристики: " + getConjure() +  " это колдовство, " + getMove() + " это трансгенерирование, " + getSmart() + " это ум, " + getWise() + " это мудрость, " + getWitty() + " это остроумие, " + getCreative() + " это творчество, итого " + getPointsKogtevran() + " баллов;";
     }
 }

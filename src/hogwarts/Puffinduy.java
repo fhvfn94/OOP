@@ -40,7 +40,6 @@ public class Puffinduy extends Hogwarts {
 //        r += getPoints() + getIndustrious() + getLoyalty() + getHonest();
 //        return r;
 //    }
-
 //    public static int getMax(Puffinduy[] studies1) {
 //        int max = studies1[0].getPointsPuffinduy();
 //        for (int i = 0; i < studies1.length; i++) {
@@ -60,5 +59,10 @@ public int getPointsPuffinduy() {
             return puffinduy.getName() + " - " + puffinduy.getPointsPuffinduy();
         }
         return puffinduy2.getName() + " - " + puffinduy2.getPointsPuffinduy();
+    }
+
+    @Override
+    public String toString() {
+        return "Меня зовут " + getName() + " мои характеристики: " + getConjure() +  " это колдовство, " + getMove() + " это трансгенерирование, " + getIndustrious() + " это трудолюбие, " + getLoyalty() + " это верность, " + getHonest() + " это честность, итого " +getPointsPuffinduy() + " баллов;";
     }
 }
