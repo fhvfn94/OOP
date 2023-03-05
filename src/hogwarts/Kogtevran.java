@@ -66,11 +66,14 @@ public int getPointsKogtevran() {
     return r;
 }
 
-    public static String getMax(Kogtevran kogtevran, Kogtevran kogtevran2) {
-        if (kogtevran.getPointsKogtevran() > kogtevran2.getPointsKogtevran()) {
-            return kogtevran.getName() + " - " + kogtevran.getPointsKogtevran();
+    public void getMaxKogtevran(Kogtevran one) {
+        int a = getPointsKogtevran();
+        int b = one.getPointsKogtevran();
+        if (a > b) {
+            System.out.println(one.getName() + " - " + a);
+        } else {
+            System.out.println(one.getName() + " - " + b);
         }
-        return kogtevran2.getName() + " - " + kogtevran2.getPointsKogtevran();
     }
 
     @Override

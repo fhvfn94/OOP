@@ -54,11 +54,14 @@ public int getPointsPuffinduy() {
     return r;
 }
 
-    public static String getMax(Puffinduy puffinduy, Puffinduy puffinduy2) {
-        if (puffinduy.getPointsPuffinduy() > puffinduy2.getPointsPuffinduy()) {
-            return puffinduy.getName() + " - " + puffinduy.getPointsPuffinduy();
+    public void getMaxPuffinduy(Puffinduy one) {
+        int a = getPointsPuffinduy();
+        int b = one.getPointsPuffinduy();
+        if (a > b) {
+            System.out.println(one.getName() + " - " + a);
+        } else {
+            System.out.println(one.getName() + " - " + b);
         }
-        return puffinduy2.getName() + " - " + puffinduy2.getPointsPuffinduy();
     }
 
     @Override

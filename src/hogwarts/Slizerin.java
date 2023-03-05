@@ -76,11 +76,14 @@ public class Slizerin extends Hogwarts {
         return r;
     }
 
-    public static String getMax(Slizerin slizerin, Slizerin slizerin2) {
-        if (slizerin.getPointsSlizerin() > slizerin2.getPointsSlizerin()) {
-            return slizerin.getName() + " - " + slizerin.getPointsSlizerin();
+    public void getMaxSlizerin(Slizerin one) {
+        int a = getPointsSlizerin();
+        int b = one.getPointsSlizerin();
+        if (a > b) {
+            System.out.println(one.getName() + " - " + a);
+        } else {
+            System.out.println(one.getName() + " - " + b);
         }
-        return slizerin2.getName() + " - " + slizerin2.getPointsSlizerin();
     }
 
     @Override

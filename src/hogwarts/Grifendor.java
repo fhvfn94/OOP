@@ -57,11 +57,14 @@ public class Grifendor extends Hogwarts {
         return r;
     }
 
-    public static String getMax(Grifendor grifendor, Grifendor grifendor2) {
-        if (grifendor.getPointsGrifendor() > grifendor2.getPointsGrifendor()) {
-            return grifendor.getName() + " - " + grifendor.getPointsGrifendor();
+    public void getMaxGrifendor(Grifendor one) {
+        int a = getPointsGrifendor();
+        int b = one.getPointsGrifendor();
+        if (a > b) {
+            System.out.println(one.getName() + " - " + a);
+        } else {
+            System.out.println(one.getName() + " - " + b);
         }
-        return grifendor2.getName() + " - " + grifendor2.getPointsGrifendor();
     }
 
     @Override
