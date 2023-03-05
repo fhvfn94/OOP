@@ -55,11 +55,13 @@ public class Hogwarts {
         return r;
     }
 
-    public static String getMax(Hogwarts one, Hogwarts two) {
-        if (one.getPoints() > two.getPoints()) {
-            return one.getName() + " - " + one.getPoints();
+    public  String getMax(Hogwarts one) {
+        int a = getPoints();
+        int b = one.getPoints();
+        if (a > b) {
+            return one.getName() + " - " + a;
         }
-        return two.getName() + " - " + two.getPoints();
+        return one.getName() + " - " + b;
     }
 
     @Override
