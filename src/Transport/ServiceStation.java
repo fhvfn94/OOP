@@ -2,18 +2,6 @@ package Transport;
 
 public class ServiceStation implements TransportMethods {
     @Override
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-    @Override
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
-    @Override
     public void checkTruck(Truck truck) {
         if (truck != null) {
             System.out.println("Обслуживаем " + truck.getModelName());
@@ -43,8 +31,14 @@ public class ServiceStation implements TransportMethods {
             }
         }
     }
-    @Override
-    public void checkTransport(Transport[] transports) {
 
+    @Override
+    public void checkTransport(Transport transport) {
+        if (transport != null) {
+            System.out.println("Обслуживаем " + transport.getModelName());
+            for (int i = 0; i < transport.getWheelsCount(); i++) {
+                transport.updateTyre();
+            }
+        }
     }
 }

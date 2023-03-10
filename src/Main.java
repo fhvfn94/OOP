@@ -3,6 +3,7 @@ import Transport.Truck;
 import Transport.Bicycle;
 import Transport.Car;
 import Transport.Truck;
+import Transport.ServiceStation;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,10 +12,7 @@ public class Main {
         Car car = new Car("C1", 4);
         Car car2 = new Car("C2", 4);
         Truck truck = new Truck("T1", 6);
-        Truck truck2 = new Truck("T2", 8);
-        Transport[] transports = {bicycle,car2, truck2};
-        for (Transport transport : transports) {
-            System.out.println(transport);
-        }
+        Transport truck2 = new Truck("T2", 8);
+        bicycle.checkCar(car);
     }
 }
