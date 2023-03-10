@@ -7,12 +7,21 @@ import Transport.ServiceStation;
 
 public class Main {
     public static void main(String[] args) {
-        Bicycle bicycle = new Bicycle("b1", 2);
-        Bicycle bicycle2 = new Bicycle("b2", 2);
-        Car car = new Car("C1", 4);
-        Car car2 = new Car("C2", 4);
-        Truck truck = new Truck("T1", 6);
-        Transport truck2 = new Truck("T2", 8);
-        bicycle.checkCar(car);
+        Car car = new Car("car1", 4);
+        Car car2 = new Car("car2", 4);
+
+        Truck truck = new Truck("truck1", 6);
+        Truck truck2 = new Truck("track2", 8);
+
+        Bicycle bicycle = new Bicycle("bicycle1", 2);
+        Bicycle bicycle2 = new Bicycle("bicycle2", 2);
+
+        ServiceStation station = new ServiceStation();
+//        station.checkTransport(car);
+        station.checkTransport(car2);
+//        station.checkTransport(bicycle);
+//        station.checkTransport(bicycle2);
+//        station.checkTransport(truck);
+//        station.checkTransport(truck2);
     }
 }
