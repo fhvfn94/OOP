@@ -6,6 +6,11 @@ public class Car extends Transport implements TransportMethods {
     }
 
     @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышку у автомобиля");
+    }
+
+    @Override
     public void check() {
         System.out.println("Проверяем двигатель");
     }

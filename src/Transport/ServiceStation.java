@@ -17,5 +17,6 @@ public class ServiceStation {
     public void check(Truck truck) {
         checkTransport(truck);
         truck.check();
+        truck.checkTrailer();
     }
 }
