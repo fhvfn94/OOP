@@ -1,5 +1,5 @@
 package Transport;
 
-public interface checkTrailer {
+public interface CheckTrailer {
     void checkTrailer();
 }
